@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+$purple: #652d90;
+$green: #4a9d45;
+$red: #eb5757;
+$red-bg: #fad5d5;
+$input-bg: #f2f2f2;
+$light-grey: #ccc;
+$placeholder: #888;
+
+$desktop: 1440px;
+$large: 1080px;
+$medium: 720px;
+$small: 500px;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+html {
+  background: white;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button {
+  padding: 5px 10px;
+  border: 2px solid black;
+  background: white;
+  border-radius: 10px;
+  min-width: 100px;
+  font-weight: 400;
+  margin: 10px;
+  color: black;
+
+  &:hover {
+    color: $green;
+    border-color: $green;
+    cursor: pointer;
+  }
+
+  &.is-primary {
+    color: white;
+    background-color: $green;
+    border-color: $green;
+
+    &:hover {
+      color: white;
+    }
+
+    &[disabled] {
+      opacity: 0.5;
+      color: white;
+      border-color: $green;
+
+      &:hover {
+        cursor: auto;
+      }
+    }
+  }
+
+  &[disabled] {
+    border-color: $placeholder;
+    color: $placeholder;
+
+    &:hover {
+      cursor: auto;
+    }
+  }
+}
+
+.button-alt {
+  color: $green;
+  border: 1px solid $green;
+  border-radius: 30px;
+  padding: 5px 10px;
+  min-width: 120px;
+  background: white;
+
+  &:hover {
+    color: $green;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    color: $placeholder;
+    border-color: $placeholder;
+
+    &:hover {
+      color: $placeholder;
+      cursor: default;
+    }
+  }
+}
+
+.main-content-container {
+  padding-top: 60px;
+  height: 100vh;
+}
+
+.loader {
+  margin: 50px auto;
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid $green; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
